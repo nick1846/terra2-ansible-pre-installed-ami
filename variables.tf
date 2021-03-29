@@ -84,8 +84,8 @@ variable "sg_egress_rules" {
 
 #my-ec2-variables
 
-#variable "my_ec2_name" {
-#}
+variable "my_ec2_name" {
+}
 
 variable "ec2_count" {  
 }
