@@ -37,7 +37,7 @@ sg_egress_rules  = ["all-all"]
 my_ec2_name = "ec2_cluster"
 ec2_count   = 1
 ec2_type    = "t2.micro" 
-ec2_tags    = { Name = "web_server"}
+ec2_tags    =  ["web_server"]
 
 
 #my-data-source-values
