@@ -54,7 +54,7 @@ module "my_ec2" {
   subnet_id              = element(module.my_vpc.public_subnets, 0)
   user_data              = file("userdata.sh")
   tags {
-    Name  = "${element(var.ec2_tags, count.index)}"
+    Name  = element(var.ec2_tags, count.index)
   }
 }
 
