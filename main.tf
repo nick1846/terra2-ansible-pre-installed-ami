@@ -43,17 +43,17 @@ module "my_sg" {
   egress_rules        = var.sg_egress_rules
 }
 
-module "my_ec2" {
+module "my_ec2_dev_cluster" {
   source                 = "terraform-aws-modules/ec2-instance/aws"  
-  name                   = var.my_ec2_name
+  name                   = var.dev_cluster_name
   key_name               = var.my_key_name 
-  instance_count         = var.ec2_count
+  instance_count         = var.ec2_count_dev
   ami                    = data.aws_ami.my_ami.id
-  instance_type          = var.ec2_type
+  instance_type          = var.ec2_type_dev
   vpc_security_group_ids = [ module.my_sg.this_security_group_id ]
   subnet_id              = element(module.my_vpc.public_subnets, 0)
   user_data              = file("userdata.sh")
-  tags                   = var.ec2_tags     
+  tags                   = var.ec2_tags_dev     
 }
 
 data "aws_ami" "my_ami" {
