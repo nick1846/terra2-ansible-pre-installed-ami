@@ -32,12 +32,12 @@ sg_ingress_rules = ["https-443-tcp", "http-80-tcp", "ssh-tcp", "http-8080-tcp"]
 sg_egress_cidr   = ["0.0.0.0/0"]
 sg_egress_rules  = ["all-all"]
 
-#my-ec2-values
+#my-ec2-dev-cluster-values
 
-my_ec2_name = "ec2_cluster"
-ec2_count   = 1
-ec2_type    = "t2.micro" 
-ec2_tags    = { Name = "web_server"}
+dev_cluster_name = "ec2_cluster"
+ec2_count_dev    = 1
+ec2_type_dev     = "t2.micro" 
+ec2_tags_dev     = { Name = "web_server"}
 
 
 #my-data-source-values
